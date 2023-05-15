@@ -112,7 +112,7 @@ function register(){
     }
     var data = {}
     data.login = user_login.value;
-    data.password = user_password.value;
+    data.password = bcrypt.hashSync(user_password.value, bcrypt.genSaltSync(12));
     data.username = username.value;
     var xhr = new XMLHttpRequest();
     xhr.open('POST', server_host + '/auth/');
