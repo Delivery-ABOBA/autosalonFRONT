@@ -11,7 +11,7 @@ var password_repeat_div = document.getElementById("confirm_div");
 var password_repeat = document.getElementById("password_confirm");
 var username_div = document.getElementById("username_div");
 
-/**const server_host = "https://sports.delivery-aboba.repl.co";**/
+const server_host = "https://autosalon--delivery-aboba.repl.co";
 
 function getCookie(name) {
     var dc = document.cookie;
