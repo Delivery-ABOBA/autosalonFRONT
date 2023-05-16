@@ -11,30 +11,26 @@
 </head>
 <body>
 <div class="login-box">
-    <h2>Login</h2>
+    <h2>Авторизация</h2>
     <form id="main_form">
         <div class="user-box">
             <input id="login" name="arg1" required>
-            <label for="login">Login</label>
+            <label for="login">Логин</label>
         </div>
         <div class="user-box">
             <input id="password" type="password" name="arg2" required>
-            <label for="password">Password</label>
+            <label for="password">Пароль</label>
         </div>
         <div class="user-box" id="confirm_div" style="display: none;">
             <input id="password_confirm" type="password" name="arg3">
-            <label for="password_confirm">Confirm password</label>
-        </div>
-        <div class="user-box" id="username_div" style="display: none;">
-            <input id="username" name="arg4">
-            <label for="username">Username</label>
+            <label for="password_confirm">Повторить пароль</label>
         </div>
         <div id="buttons_holder">
             <div style="text-align: center;" id="login_div">
                 <a onclick="login();" id="login_button">
                     <span></span>
                     <span></span>
-                    LOGIN
+                    Войти
                     <span></span>
                     <span></span>
                 </a>
@@ -43,14 +39,14 @@
                 <a onclick="register();" id="register_button">
                     <span></span>
                     <span></span>
-                    REGISTER
+                    Зарегестрироваться
                     <span></span>
                     <span></span>
                 </a>
             </div>
             <div style="text-align: center; margin-top: 20px; color: #fff;">
                 <a onclick="show_register_panel();" id="show_register" style="all: unset;">
-                    Register now
+                    Регистрация
                 </a>
             </div>
         </div>
