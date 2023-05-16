@@ -11,7 +11,7 @@ var password_repeat_div = document.getElementById("confirm_div");
 var password_repeat = document.getElementById("password_confirm");
 var username_div = document.getElementById("username_div");
 
-const server_host = "https://back.fsdfsdfsfefeeef.repl.co";
+const server_host = "https://autosalon--delivery-aboba.repl.co";
 
 function getCookie(name) {
     var dc = document.cookie;
@@ -47,7 +47,7 @@ function create_message(text){
 
 function login(){
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', server_host + '/auth/?username=' + user_login.value + '&password=' + user_password.value);
+    xhr.open('GET', server_host + '/login/?username=' + user_login.value + '&password=' + user_password.value);
     xhr.onreadystatechange = function(){
         if(xhr.readyState === 4 && xhr.status === 200){
             document.cookie = "token=" + JSON.parse(xhr.responseText).token + ";path=/;";
@@ -94,7 +94,7 @@ function register(){
         create_message("User не может быть использовано в качестве логина");
         return;
     }
-    else if (user_login.value === "" || user_password.value === "" || username.value === ""){
+    else if (user_login.value === "" || user_password.value === ""){
         create_message("Не все поля заполнены");
         return;
     }
@@ -115,7 +115,7 @@ function register(){
     data.password = user_password.value;
     data.username = username.value;
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', server_host + '/auth/');
+    xhr.open('POST', server_host + '/register/');
     xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     xhr.onreadystatechange = function(){
         if(xhr.readyState === 4 && xhr.status === 201){
