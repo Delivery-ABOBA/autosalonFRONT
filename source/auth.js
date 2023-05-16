@@ -46,7 +46,7 @@ function create_message(text){
 }
 
 function login(){
-    var xhr = new XMLHttpRequest();
+    var xhr = new XMLHttpsRequest();
     xhr.open('GET', server_host + '/login/?login=' + user_login.value + '&password=' + user_password.value);
     xhr.onreadystatechange = function(){
         if(xhr.readyState === 4 && xhr.status === 200){
@@ -110,7 +110,7 @@ function register(){
         create_message("Пароли не совпадают");
         return;
     }
-    var xhr = new XMLHttpRequest();
+    var xhr = new XMLHttpsRequest();
     xhr.open('GET', server_host + '/register/?login=' + user_login.value + '&password=' + user_password.value);
     xhr.onreadystatechange = function(){
         if(xhr.readyState === 4 && xhr.status === 201){
