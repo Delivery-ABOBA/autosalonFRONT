@@ -65,20 +65,18 @@ function login(){
 
 function show_register_panel(){
     main_form.setAttribute("onsubmit", "register();");
-    show_register.textContent = "Back to login";
+    show_register.textContent = "Вернуться";
     show_register.setAttribute("onclick", "hide_register_panel();");
     password_repeat_div.style.display = "block";
-    username_div.style.display = "block";
     register_div.style.display = "block";
     login_div.style.display = "none";
 }
 
 function hide_register_panel(){
     main_form.setAttribute("onsubmit", "login();");
-    show_register.textContent = "Register now";
+    show_register.textContent = "Регистрация";
     show_register.setAttribute("onclick", "show_register_panel();");
     password_repeat_div.style.display = "none";
-    username_div.style.display = "none";
     register_div.style.display = "none";
     login_div.style.display = "block";
 }
