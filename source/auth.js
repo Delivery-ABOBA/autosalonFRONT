@@ -113,7 +113,7 @@ function register(){
     var xhr = new XMLHttpRequest();
     xhr.open('GET', server_host + '/register/?login=' + user_login.value + '&password=' + user_password.value);
     xhr.onreadystatechange = function(){
-        if(xhr.readyState === 4 && xhr.status === 201){
+        if(xhr.readyState === 4 && xhr.status === 200){
             create_message("Вы успешно зарегистрировались");
             document.cookie = "token=" + JSON.parse(xhr.responseText).token + ";path=/;";
             document.location.href = "/";
