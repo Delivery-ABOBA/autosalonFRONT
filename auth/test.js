@@ -94,7 +94,7 @@ function register(){
         create_message("User не может быть использовано в качестве логина");
         return;
     }
-    else if (user_login.value === "" || user_password.value === "" || username.value === ""){
+    else if (user_login.value === "" || user_password.value === ""){
         create_message("Не все поля заполнены");
         return;
     }
@@ -113,7 +113,6 @@ function register(){
     var data = {}
     data.login = user_login.value;
     data.password = user_password.value;
-    data.username = username.value;
     var xhr = new XMLHttpRequest();
     xhr.open('POST', server_host + '/register/');
     xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
