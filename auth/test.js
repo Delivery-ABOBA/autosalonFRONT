@@ -47,7 +47,7 @@ function create_message(text){
 
 function login(){
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', server_host + '/auth/?username=' + user_login.value + '&password=' + user_password.value);
+    xhr.open('GET', server_host + '/login/?username=' + user_login.value + '&password=' + user_password.value);
     xhr.onreadystatechange = function(){
         if(xhr.readyState === 4 && xhr.status === 200){
             document.cookie = "token=" + JSON.parse(xhr.responseText).token + ";path=/;";
@@ -115,7 +115,7 @@ function register(){
     data.password = user_password.value;
     data.username = username.value;
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', server_host + '/auth/');
+    xhr.open('POST', server_host + '/register/');
     xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     xhr.onreadystatechange = function(){
         if(xhr.readyState === 4 && xhr.status === 201){
